@@ -6,7 +6,7 @@ import { MailPreviewComponent } from "./MailPreviewComponent";
 
 export const Main = () => (
   <>
-    <div className="bg-gray-200 h-screen flex flex-col items-center justify-center">
+    <div className="p-2 flex flex-col items-center justify-center h-screen overflow-hidden">
       <div className="h-full w-full flex flex-row justify-between p-2">
         {/* sidepane -1  */}
         <MailActionsMenu />
@@ -34,6 +34,7 @@ export const Main = () => (
               </span>
             </div>
           </div>
+          
           <Switch>
             <Route path="/inbox">
               <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />

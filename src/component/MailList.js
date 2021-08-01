@@ -9,7 +9,7 @@ export const MailList = () => {
         <h1 className="text-2xl font-bold uppercase">{path.substring(1)}</h1>
       </div>
       {/* this is list of mails */}
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-hidden">
         {/* list of mails */}
         <ul className="m-10 space-y-2">
           <Link to={`${url}/1`}>

@@ -1,81 +1,149 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const MailActionsMenu = () => {
   return (
     <>
-      <ul className="p-2">
-        <Link to="/inbox">
-          <li className="flex space-x-2 mb-5 p-3 w-full bg-blue-400">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"
-              />
-            </svg>
-            <span>Inbox</span>
-          </li>
-        </Link>
-        <Link to="/outbox">
-          <li className="flex space-x-2 mb-5 p-3 w-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" />
-            </svg>
-            <span>Outbox</span>
-          </li>
-        </Link>
+      {/* navigation side pane */}
+      <div className="p-2 w-2/4 bg-gray-200 rounded-bl-lg">
+        {/* new message button */}
+        <div className="flex justify-center items-center p-10">
+          <button className="p-2 bg-blue-700 w-full text-center text-white font-semibold rounded-lg">
+            New Message
+          </button>
+        </div>
+        {/* menu */}
+        <div className="flex flex-col">
+          <ul className="space-y-6">
+            <li>
+              <Link to="/inbox">
+                <div className="flex justify-around font-semibold text-sm">
+                  <div className="space-x-5">
+                    <span className="text-gray-600">
+                      <i className="fa fa-inbox"></i>
+                    </span>
+                    <span>Inbox</span>
+                  </div>
+                  <span className="bg-blue-800 p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white">
+                    7
+                  </span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/outbox">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-star"></i>
+                    </span>
+                    <span>Outbox</span>
+                  </div>
+                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/drafts">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-clock"></i>
+                    </span>
+                    <span>Drafts</span>
+                  </div>
+                  <span className="bg-yellow-500 p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white">
+                    2
+                  </span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/trash">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-trash"></i>
+                    </span>
+                    <span>Trash</span>
+                  </div>
+                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/archive">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-archive"></i>
+                    </span>
+                    <span>Archive</span>
+                  </div>
+                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/settings">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-wrench"></i>
+                    </span>
+                    <span>Settings</span>
+                  </div>
+                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </div>
 
-        <Link to="/sent">
-          <li className="flex space-x-2 mb-5 p-3 w-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            <span>Sent</span>
-          </li>
-        </Link>
+        {/* separator */}
+        <div className="flex justify-center items-center">
+          <hr className="bg-gray-700 opacity-20 h-0.5 mt-10 w-full" />
+        </div>
 
-        <Link to="/trash">
-          <li className="flex space-x-2 mb-5 p-3 w-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-              />
-            </svg>
-            <span>Trash</span>
-          </li>
-        </Link>
-      </ul>
+        {/* tags */}
+        {/* work in progress */}
+        <div className="flex flex-col p-10 space-y-7">
+          <div className="flex justify-start items-center">
+            <div className="h-6 w-6 rounded-full border-4 border-blue-700 flex justify-center items-center">
+              <div className="bg-transparent h-4 w-2 rounded-full"></div>
+            </div>
+            <span className="ml-10 text-gray-700 font-semibold text-lg opacity-80">
+              Work & Enquiries
+            </span>
+          </div>
+
+          <div className="flex">
+            <div className="h-6 w-6 rounded-full border-4 border-yellow-500 flex justify-center items-center">
+              <div className="bg-transparent h-4 w-4 rounded-full"></div>
+            </div>
+            <span className="ml-10 text-gray-700 font-semibold text-sm opacity-50">
+              Family
+            </span>
+          </div>
+          <div className="flex">
+            <div className="h-6 w-6 rounded-full border-4 border-green-500 flex justify-center items-center">
+              <div className="bg-transparent h-4 w-4 rounded-full"></div>
+            </div>
+            <span className="ml-10 text-gray-700 font-semibold text-sm opacity-50">
+              Friends
+            </span>
+          </div>
+          <div className="flex">
+            <div className="h-6 w-6 rounded-full border-4 border-red-600 flex justify-center items-center">
+              <div className="bg-transparent h-4 w-4 rounded-full"></div>
+            </div>
+            <span className="ml-10 text-gray-700 font-semibold text-sm opacity-50">
+              Clients
+            </span>
+          </div>
+        </div>
+        {/* end of navigation sidepane  */}
+      </div>
     </>
   );
 };

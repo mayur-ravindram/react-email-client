@@ -8,25 +8,10 @@ export const Main = () => (
   <>
     <div className="bg-gray-200 h-screen flex flex-col items-center justify-center">
       <div className="h-full w-full flex flex-row justify-between p-2">
-        <div className="bg-gray-300 w-1/3 flex flex-col">
-          <Link
-            to="/"
-            className="rounded-lg m-5 text-sm 
-              bg-blue-800 font-bold h-12 p-2 text-white"
-          >
-            New Message
-          </Link>
+        {/* sidepane -1  */}
+        <MailActionsMenu />
 
-          <div className="divide-y-2 bg-gray-400">
-            <div className="w-1"></div>
-            <div className="w-1"></div>
-          </div>
-
-          {/* navigation component */}
-          <div className="flex flex-col">
-            <MailActionsMenu />
-          </div>
-        </div>
+        {/* sidepane -2  */}
         <div className="bg-gray-100 w-1/2 flex flex-col">
           <div className="flex flex-col bg-gray-100 rounded-xl p-2">
             {/* this is input box + search flex */}

@@ -6,7 +6,7 @@ import MailList from "./component/MailList";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container mx-auto my-auto">
       <Switch>
         <Route path="/">
           <Main />

@@ -16,7 +16,7 @@ export const Main = () => (
           <div className="flex flex-col bg-gray-100 rounded-xl p-2">
             {/* this is input box + search flex */}
             <div className="flex p-2 m-2 bg-white rounded-sm shadow-sm">
-              <input type="search" className="w-full h-auto outline-none" />
+              <input type="search" className="w-full h-auto outline-none" placeholder="Search" />
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -36,32 +36,46 @@ export const Main = () => (
           </div>
           <Switch>
             <Route path="/inbox">
-              <MailList className="flex flex-col" />
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
             </Route>
-            <Route path="/outbox">
-              <MailList className="flex flex-col" />
+            <Route path="/drafts">
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
             </Route>
             <Route path="/sent">
-              <MailList className="flex flex-col" />
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+            </Route>
+            <Route path="/outbox">
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
             </Route>
             <Route path="/trash">
-              <MailList className="flex flex-col" />
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+            </Route>
+            <Route path="/archive">
+              <MailList className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
             </Route>
           </Switch>
         </div>
+        
         <div>
           <div className="w-1"></div>
         </div>
-        {/* this is mail preview section */}
+
+        {/* sidepane -3 */}
         <div className="bg-white w-full flex flex-col">
           <Switch>
             <Route path="/inbox/:id">
               <MailPreviewComponent />
             </Route>
-            <Route path="/outbox/:id">
+            <Route path="/drafts/:id">
               <MailPreviewComponent />
             </Route>
             <Route path="/sent/:id">
+              <MailPreviewComponent />
+            </Route>
+            <Route path="/outbox/:id">
+              <MailPreviewComponent />
+            </Route>
+            <Route path="/archive/:id">
               <MailPreviewComponent />
             </Route>
             <Route path="/trash/:id">

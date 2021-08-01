@@ -31,19 +31,6 @@ const MailActionsMenu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/outbox">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
-                  <div className="space-x-5">
-                    <span className="text-gray-400">
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>Outbox</span>
-                  </div>
-                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
-                </div>
-              </Link>
-            </li>
-            <li>
               <Link to="/drafts">
                 <div className="flex justify-around font-semibold text-sm opacity-50">
                   <div className="space-x-5">
@@ -59,13 +46,26 @@ const MailActionsMenu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/trash">
+              <Link to="/sent">
+                <div className="flex justify-around font-semibold text-sm opacity-50">
+                  <div className="space-x-5">
+                    <span className="text-gray-400">
+                      <i className="fa fa-star"></i>
+                    </span>
+                    <span>Sent</span>
+                  </div>
+                  <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/outbox">
                 <div className="flex justify-around font-semibold text-sm opacity-50">
                   <div className="space-x-5">
                     <span className="text-gray-400">
                       <i className="fa fa-trash"></i>
                     </span>
-                    <span>Trash</span>
+                    <span>Outbox</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -85,13 +85,13 @@ const MailActionsMenu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/settings">
+              <Link to="/trash">
                 <div className="flex justify-around font-semibold text-sm opacity-50">
                   <div className="space-x-5">
                     <span className="text-gray-400">
                       <i className="fa fa-wrench"></i>
                     </span>
-                    <span>Settings</span>
+                    <span>Trash</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>

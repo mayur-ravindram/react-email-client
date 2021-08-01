@@ -1,6 +1,8 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 export const MailPreviewComponent = () => {
+  let { id } = useParams();
   return (
     <>
       <div className="m-3">
@@ -8,6 +10,7 @@ export const MailPreviewComponent = () => {
           <h1>
             Sender_name <b>To</b> Me
           </h1>
+          <h3>ID: {id}</h3>
           {/* mail actions options */}
           <div className="mt-10">
             <ul className="flex flex-row space-x-5 justify-end">

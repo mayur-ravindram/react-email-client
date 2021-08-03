@@ -1,7 +1,66 @@
 {
-    "id":1,
-    "from":"John Doe",
-    "to":"Elon Musk",
-    "subject":"Tesla new model update",
-    "body":"Hi Elon↵↵Hope you are doing good.↵↵Please update me when my Tesla Mode X will be delivered.↵↵Thanks, ↵John."
+    "mails": {
+        "inbox": [
+            {
+            "id": 1,
+            "from": "Elon Musk",
+            "to": "John Doe",
+            "subject": "Tesla new model update",
+            "avatar": "https://placekitten.com/200/200",
+            "body": "Hi John<br><br>Hope you are doing good.<br>Tesla Mode X will be delivered shortly.<br><br>Thanks,<br>Elon."
+            },
+            {
+            "id": 2,
+            "from": "Bill Gates",
+            "to": "John Doe",
+            "subject": "Windows update do not suck anymore!",
+            "avatar": "https://placekitten.com/201/200",
+            "body": "Hi John<br><br>These updates are not annoying anymore!.<br><br>Regards,<br>Bill."
+            },
+            {
+            "id": 3,
+            "from": "Kaushiki Mongoo",
+            "to": "John Doe",
+            "subject": "I want to play!!",
+            "avatar": "https://placekitten.com/300/200",
+            "body": "Hi John<br><br>I want to play whole day and don;t want to sleep 😁;"
+            }
+        ],
+        "outbox": [
+            {
+            "id": 1,
+            "from": "John Doe",
+            "to": "Elon Musk",
+            "subject": "Tesla new model update",
+            "avatar": "https://placekitten.com/209/200",
+            "body": "Hi Elon<br>Hope you are doing good.<br>Please update me when my Tesla Mode X will be delivered.<br><br>Thanks,<br>John."
+            },
+            {
+            "id": 2,
+            "from": "John Doe",
+            "to": "Bill Gates",
+            "subject": "Windows update suck!",
+            "avatar": "https://placekitten.com/209/200",
+            "body": "Hi Bill<br>Please fix my computer.<br>These updates are really annoying.<br><br>Regards,<br>John."
+            }
+        ],
+        "drafts": [
+            {
+            "id": 1,
+            "from": "John Doe",
+            "to": "Jenny",
+            "subject": "Lunch?",
+            "avatar": "https://placekitten.com/209/200",
+            "body": "Wanna have a lunch today..?"
+            },
+            {
+            "id": 2,
+            "from": "John Doe",
+            "to": "Mayur R",
+            "subject": "Code coverage",
+            "avatar": "https://placekitten.com/209/200",
+            "body": "Hey M, let's connect for code coverage review"
+            }
+        ]
+    }
 }

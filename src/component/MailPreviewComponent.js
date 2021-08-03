@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import cat from '../assets/cat.png';
 
 export const MailPreviewComponent = ({data}) => {
   let { id } = useParams();

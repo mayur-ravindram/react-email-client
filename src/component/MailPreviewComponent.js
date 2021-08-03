@@ -1,47 +1,37 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import cat from '../assets/cat.png';
 
-export const MailPreviewComponent = () => {
+export const MailPreviewComponent = ({data}) => {
   let { id } = useParams();
-  // make api call to get the email for the id
-  const body = {
-    sender: "Mayur Ravindra M",
-    subject: "New project brief",
-    avatar: "",
-    body: "lorem ipsum",
-    attachments: [
-      {
-        icon: 'fa fa-paperclip',
-        title: 'Project-brief.pdf',
-        size: '1.02 MB'
-      },
-      {
-        icon: 'fa fa-paperclip',
-        title: 'Project-brief.pdf',
-        size: '1.02 MB'
-      }
-    ]
-  }
+  {data.map((value, index) => {
+    if(id == value.id) {
+      
+    }
+  })}
+
+  let message = data.filter((v) => v.id == id)[0];
+  console.log(message.id)
   return (
     <>
-      <div className="flex flex-col w-full bg-white rounded-r-xl border h-full">
+      <div className="flex flex-col w-full bg-white border rounded-r-xl h-full">
         {/* action banner */}
         <div className=" border m-10 border-gray-300 bg-gray-50 rounded-lg p-2 text-center font-semibold text-sm opacity-40 text-gray-700">
           Load previous 3 messages. ID: {id}
         </div>
         {/* legend: from x to y */}
         <div className="font-bold text-sm ml-10 text-gray-600">
-          {body.sender}
+          {message.from}
           <span className="font-normal mx-1">to</span>
-          John Doe
+          {message.to}
         </div>
         {/* subject line, time and avatar */}
         <div className="m-10 flex justify-between items-center">
-          <h1 className="text-3xl font-semibold">New project brief</h1>
+          <h1 className="text-3xl font-semibold">{message.subject}</h1>
           <div className="flex space-x-4 items-center">
             <h1 className="text-xl font-thin">Just now</h1>
             <img
-              src="./img/me.jpg"
+              src={message.avatar}
               alt="me"
               className="rounded-full h-16 w-16 shadow-md"
             />
@@ -50,7 +40,7 @@ export const MailPreviewComponent = () => {
 
         {/* mail content */}
         <div className="m-10 text-gray-800 font-medium text-sm leading-8">
-          {body.body}
+          {message.body}
 
           {/* attachments */}
         

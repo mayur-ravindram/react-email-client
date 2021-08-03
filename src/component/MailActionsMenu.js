@@ -8,9 +8,9 @@ const MailActionsMenu = () => {
       <div className="p-2 w-1/3 bg-gray-200 rounded-l-xl">
         {/* new message button */}
         <div className="flex justify-center items-center p-10">
-          <button className="p-2 bg-blue-700 w-full text-center text-white font-semibold rounded-lg">
+          <Link to="/" className="p-2 bg-blue-700 w-full text-center text-white font-semibold rounded-lg">
             New Message
-          </button>
+          </Link>
         </div>
         {/* menu */}
         <div className="flex flex-col">

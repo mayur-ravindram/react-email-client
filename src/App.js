@@ -6,12 +6,13 @@ import MailList from "./component/MailList";
 
 function App() {
   return (
-    <div className="container mx-auto my-auto">
+    <div className="my-auto bg-gray-800">
       <Switch>
         <Route path="/">
           <Main />
         </Route>
       </Switch>
+      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </div>
   );
 }

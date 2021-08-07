@@ -8,8 +8,15 @@ export const Main = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetchMails(setList);
-    console.log("email list successfully fetched ☑", list)
+    fetch("http://localhost:1332/api/email/list", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => setList(json))
+      .catch((err) => console.log(err));
   }, [setList]);
   return (
     <>
@@ -22,7 +29,7 @@ export const Main = () => {
           <div className="bg-white w-1/2 flex flex-col">
             <div className="flex flex-col rounded-xl p-2">
               {/* this is input box + search flex */}
-              <div className="flex p-2 m-2 bg-white rounded-sm shadow-sm">
+              <div className="flex p-2 m-2 bg-white rounded-sm shadow-md">
                 <input
                   type="search"
                   className="w-full h-auto outline-none"
@@ -50,23 +57,41 @@ export const Main = () => {
               <Route
                 path="/inbox"
                 render={(props) => (
-                  <MailList data={list.inbox} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                  <MailList
+                    data={list}
+                    className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                  />
                 )}
               ></Route>
               <Route path="/drafts">
-                <MailList data={list.drafts} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                <MailList
+                  data={list.drafts}
+                  className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                />
               </Route>
               <Route path="/sent">
-                <MailList data={list.sent} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                <MailList
+                  data={list.sent}
+                  className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                />
               </Route>
               <Route path="/outbox">
-                <MailList data={list.outbox} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                <MailList
+                  data={list.outbox}
+                  className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                />
               </Route>
               <Route path="/trash">
-                <MailList data={list.trash} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                <MailList
+                  data={list.trash}
+                  className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                />
               </Route>
               <Route path="/archive">
-                <MailList data={list.archive} className="flex bg-white w-2/3 rounded-l-3xl -ml-5" />
+                <MailList
+                  data={list.archive}
+                  className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
+                />
               </Route>
             </Switch>
           </div>
@@ -79,7 +104,7 @@ export const Main = () => {
           <div className="bg-gray-100 w-full flex flex-col rounded-r-xl">
             <Switch>
               <Route path="/inbox/:id">
-                <MailPreviewComponent data={list.inbox} />
+                <MailPreviewComponent data={list} />
               </Route>
               <Route path="/drafts/:id">
                 <MailPreviewComponent data={list.drafts} />
@@ -103,12 +128,3 @@ export const Main = () => {
     </>
   );
 };
-async function fetchMails(setList) {
-  await fetch("http://localhost:3001/mails")
-    .then((response) => response.json())
-    .then((response) => {
-      setList(response);
-    })
-    .catch((err) => console.log(err));
-}
-

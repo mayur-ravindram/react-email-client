@@ -61,6 +61,36 @@
             "avatar": "https://placekitten.com/209/200",
             "body": "Hey M, let's connect for code coverage review"
             }
+        ],
+        "sent": [
+            {
+            "id": 1,
+            "from": "John Doe",
+            "to": "Receiver Unknown",
+            "subject": "Lunch?",
+            "avatar": "https://placekitten.com/213/200",
+            "body": "this is sample sent message"
+            }
+        ],
+        "archive": [
+            {
+            "id": 1,
+            "from": "Sender Unknown",
+            "to": "Jenny",
+            "subject": "Lunch?",
+            "avatar": "https://placekitten.com/209/210",
+            "body": "this is sample archive message"
+            }
+        ],
+        "trash": [
+            {
+            "id": 1,
+            "from": "Johnny Bravo",
+            "to": "John Doe",
+            "subject": "trash subject?",
+            "avatar": "https://placekitten.com/209/220",
+            "body": "this is trash message"
+            }
         ]
     }
 }

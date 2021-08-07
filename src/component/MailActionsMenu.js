@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const MailActionsMenu = () => {
   return (
     <>
       {/* navigation side pane */}
-      <div className="p-2 w-1/3 bg-gray-200 rounded-l-xl">
+      <div className="p-2 w-1/3 bg-gray-100 rounded-l-xl">
         {/* new message button */}
         <div className="flex justify-center items-center p-10">
-          <Link to="/" className="p-2 bg-blue-700 w-full text-center text-white font-semibold rounded-lg">
+          <Link
+            to="/"
+            className="p-2 bg-blue-700 w-full text-center text-white font-semibold rounded-lg"
+          >
             New Message
           </Link>
         </div>
@@ -16,7 +19,15 @@ const MailActionsMenu = () => {
         <div className="flex flex-col">
           <ul className="space-y-6">
             <li>
-              <Link to="/inbox">
+              <NavLink
+                exact
+                to="/inbox"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "red",
+                  fontSize: "1rem"
+                }}
+              >
                 <div className="flex justify-around font-semibold text-sm">
                   <div className="space-x-5 w-1/2">
                     <span className="text-gray-600">
@@ -28,7 +39,7 @@ const MailActionsMenu = () => {
                     7
                   </span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li>
               <Link to="/drafts">
@@ -108,7 +119,6 @@ const MailActionsMenu = () => {
         {/* tags */}
         {/* work in progress */}
         <div className="flex flex-col p-10 space-y-7">
-         
           <div className="flex">
             <div className="h-6 w-6 rounded-full border-4 border-blue-500 flex justify-center items-center">
               <div className="bg-transparent h-4 w-4 rounded-full"></div>

@@ -1,36 +1,30 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-export const MailPreviewComponent = ({data}) => {
+export const MailPreviewComponent = ({ data }) => {
   let { id } = useParams();
-  {data.map((value, index) => {
-    if(id == value.id) {
-      
-    }
-  })}
 
-  let message = data.filter((v) => v.id == id)[0];
-  console.log(message.id)
+  let message = data.inbox.filter((v) => v.id == id)[0];
   return (
     <>
       <div className="flex flex-col w-full bg-white border rounded-r-xl h-full">
         {/* action banner */}
-        <div className=" border m-10 border-gray-300 bg-gray-50 rounded-lg p-2 text-center font-semibold text-sm opacity-40 text-gray-700">
+        <div className="m-10 border border-gray-200 bg-gray-50 rounded-lg p-2 text-center font-semibold text-sm opacity-40 text-gray-700">
           Load previous 3 messages. ID: {id}
         </div>
         {/* legend: from x to y */}
-        <div className="font-bold text-sm ml-10 text-gray-600">
-          {message.from}
+        <div className="font-bold text-sm ml-10 mt-10 text-gray-600">
+          {message.emailFrom}
           <span className="font-normal mx-1">to</span>
-          {message.to}
+          {message.emailTo}
         </div>
         {/* subject line, time and avatar */}
         <div className="m-10 flex justify-between items-center">
-          <h1 className="text-3xl font-semibold">{message.subject}</h1>
+          <h1 className="text-3xl font-semibold">{message.emailSubject}</h1>
           <div className="flex space-x-4 items-center">
             <h1 className="text-xl font-thin">Just now</h1>
             <img
-              src={message.avatar}
+              src={message.emailAvatarUrl}
               alt="me"
               className="rounded-full h-16 w-16 shadow-md"
             />
@@ -39,11 +33,11 @@ export const MailPreviewComponent = ({data}) => {
 
         {/* mail content */}
         <div className="m-10 text-gray-800 font-medium text-sm leading-8">
-          {message.body}
+          <pre className="font-semibold">{message.emailBody}</pre>
 
           {/* attachments */}
-        
-          <div className="space-y-1">
+
+          {/* <div className="space-y-1">
             <div className="mt-10 space-x-3 flex items-center">
               <div className="h-10 w-10 text-center text-gray-500 bg-blue-300 rounded-md">
                 <i className="fa fa-paperclip"></i>
@@ -62,7 +56,7 @@ export const MailPreviewComponent = ({data}) => {
                 <span className="text-xs font-medium opacity-50">4.96 MB</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* CTA options */}
           <div className="flex justify-end space-x-4 items-baseline">

@@ -3,20 +3,23 @@ import { Route, Switch } from "react-router-dom";
 import MailActionsMenu from "./MailActionsMenu";
 import MailList from "./MailList";
 import { MailPreviewComponent } from "./MailPreviewComponent";
+import data from '../api/mails.json';
 
 export const Main = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1332/api/email/list", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => setList(json))
-      .catch((err) => console.log(err));
+    // fetch("http://localhost:1332/api/email/list", {
+    //   method: "GET",
+    //   headers: {
+    //     Accept: "application/json",
+    //   },
+    // })
+    //   .then((response) => response.json())
+    //   .then((json) => setList(json))
+    //   .catch((err) => console.log(err));
+
+    setList(data)
   }, [setList]);
   return (
     <>

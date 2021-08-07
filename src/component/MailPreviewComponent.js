@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 export const MailPreviewComponent = ({ data }) => {
   let { id } = useParams();
 
-  let message = data.inbox.filter((v) => v.id == id)[0];
+  let message = data.inbox.find((v) => v.id === id);
   return (
     <>
       <div className="flex flex-col w-full bg-white border rounded-r-xl h-full">

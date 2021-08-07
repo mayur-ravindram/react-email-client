@@ -24,11 +24,13 @@ const MailActionsMenu = () => {
                 to="/inbox"
                 activeStyle={{
                   fontWeight: "bold",
-                  color: "red",
-                  fontSize: "1rem"
+                  color: "black",
+                  fontSize:"1.125rem",
+                  backgroundColor: "#0984e3"
                 }}
+                className="font-semibold text-sm"
               >
-                <div className="flex justify-around font-semibold text-sm">
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
                     <span className="text-gray-600">
                       <i className="fa fa-inbox"></i>

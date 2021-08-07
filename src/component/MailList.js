@@ -27,8 +27,8 @@ export function MailList({data}) {
                 <div className="text-lg font-bold mt-2 h-12 overflow-hidden">
                   {value.emailSubject}
                 </div>
-                <div className="mt-2 flex justify-center items-center bg-red-500 h-4 w-4 rounded-full">
-                  <span className="text-white">!</span>
+                <div className="mt-2 flex">
+                  <span className="text-sm">Received : {value.timestamp}</span>
                 </div>
               </li>
             </Link>

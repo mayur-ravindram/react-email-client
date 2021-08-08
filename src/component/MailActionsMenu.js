@@ -20,7 +20,6 @@ const MailActionsMenu = () => {
           <ul className="space-y-6">
             <li>
               <NavLink
-                exact
                 to="/inbox"
                 activeStyle={{
                   fontWeight: "bold",
@@ -42,7 +41,6 @@ const MailActionsMenu = () => {
             </li>
             <li>
               <NavLink
-                exact
                 to="/drafts"
                 activeStyle={{
                   fontWeight: "bold",
@@ -64,7 +62,6 @@ const MailActionsMenu = () => {
             </li>
             <li>
               <NavLink
-                exact
                 to="/sent"
                 activeStyle={{
                   fontWeight: "bold",
@@ -86,7 +83,6 @@ const MailActionsMenu = () => {
             </li>
             <li>
               <NavLink
-                exact
                 to="/outbox"
                 activeStyle={{
                   fontWeight: "bold",
@@ -108,7 +104,6 @@ const MailActionsMenu = () => {
             </li>
             <li>
               <NavLink
-                exact
                 to="/archive"
                 activeStyle={{
                   fontWeight: "bold",
@@ -130,7 +125,6 @@ const MailActionsMenu = () => {
             </li>
             <li>
               <NavLink
-                exact
                 to="/trash"
                 activeStyle={{
                   fontWeight: "bold",

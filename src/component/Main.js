@@ -24,12 +24,12 @@ export const Main = () => {
   return (
     <>
       <div className="p-2 flex flex-col items-center justify-center h-screen overflow-hidden">
-        <div className="h-full w-full flex flex-row justify-between p-2">
+        <div className="h-screen w-full sm:w-full sm:flex sm:flex-row sm:justify-between p-2">
           {/* sidepane -1  */}
           <MailActionsMenu />
 
           {/* sidepane -2  */}
-          <div className="bg-white w-1/2 flex flex-col">
+          <div className="bg-white sm:w-1/2 sm:flex sm:flex-col">
             <div className="flex flex-col rounded-xl p-2">
               {/* this is input box + search flex */}
               <div className="flex p-2 m-2 bg-white rounded-sm shadow-md">

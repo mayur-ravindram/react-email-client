@@ -20,95 +20,129 @@ const MailActionsMenu = () => {
           <ul className="space-y-6">
             <li>
               <NavLink
-                exact
                 to="/inbox"
                 activeStyle={{
                   fontWeight: "bold",
-                  color: "black",
-                  fontSize:"1.125rem",
-                  backgroundColor: "#0984e3"
+                  color: "tomato",
+                  fontSize: "1.125rem",
                 }}
-                className="font-semibold text-sm"
+                className="font-semibold text-gray-400"
               >
                 <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-600">
+                    <span className="">
                       <i className="fa fa-inbox"></i>
                     </span>
                     <span>Inbox</span>
                   </div>
-                  <span className="bg-blue-800 p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white">
-                    7
-                  </span>
+                  <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
               </NavLink>
             </li>
             <li>
-              <Link to="/drafts">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
+              <NavLink
+                to="/drafts"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "tomato",
+                  fontSize: "1.125rem",
+                }}
+                className="font-semibold text-gray-400"
+              >
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-400">
+                    <span>
                       <i className="fa fa-clock"></i>
                     </span>
                     <span>Drafts</span>
                   </div>
-                  <span className="bg-yellow-500 p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white">
-                    2
-                  </span>
+                  <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/sent">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
+              <NavLink
+                to="/sent"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "tomato",
+                  fontSize: "1.125rem",
+                }}
+                className="font-semibold text-gray-400"
+              >
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-400">
+                    <span>
                       <i className="fa fa-check-circle"></i>
                     </span>
                     <span>Sent</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/outbox">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
+              <NavLink
+                to="/outbox"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "tomato",
+                  fontSize: "1.125rem",
+                }}
+                className="font-semibold text-gray-400"
+              >
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-400">
+                    <span>
                       <i className="fa fa-sign-out-alt"></i>
                     </span>
                     <span>Outbox</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/archive">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
+              <NavLink
+                to="/archive"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "tomato",
+                  fontSize: "1.125rem",
+                }}
+                className="font-semibold text-gray-400"
+              >
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-400">
+                    <span>
                       <i className="fa fa-archive"></i>
                     </span>
                     <span>Archive</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/trash">
-                <div className="flex justify-around font-semibold text-sm opacity-50">
+              <NavLink
+                to="/trash"
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "tomato",
+                  fontSize: "1.125rem",
+                }}
+                className="font-semibold text-gray-400"
+              >
+                <div className="flex justify-around">
                   <div className="space-x-5 w-1/2">
-                    <span className="text-gray-400">
+                    <span>
                       <i className="fa fa-trash"></i>
                     </span>
                     <span>Trash</span>
                   </div>
                   <span className="bg-transparent p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

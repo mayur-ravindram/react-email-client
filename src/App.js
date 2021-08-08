@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-green-200 mx-auto">
+    <div className="">
       <Switch>
         <Route path="/">
           <Main />

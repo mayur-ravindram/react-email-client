@@ -9,9 +9,9 @@ export function MailList({data}) {
         <h1 className="text-2xl font-bold uppercase">{path.substring(1)}</h1>
       </div>
       {/* this is list of mails */}
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col overflow-auto">
         {/* list of mails */}
-        <ul className="m-10 space-y-2">
+        <ul className="m-10 space-y-2 overflow-auto">
           {data && data.inbox.map((value, index) => (
             <Link key={index} to={`${url}/${value.id}`}>
               <li key={index} className="shadow-lg p-3 rounded-sm">

@@ -5,21 +5,21 @@ const MailActionsMenu = () => {
   return (
     <>
       {/* navigation side pane */}
-      <div className="p-2 w-full my-5 sm:m-0 sm:w-1/3 bg-gray-100 sm:rounded-l-xl">
+      <div className="p-2 w-full my-5 h-20 absolute left-0 bottom-0 flex sm:flex sm:flex-col sm:h-auto sm:relative sm:m-0 sm:w-1/3 bg-gray-200 sm:rounded-l-xl">
         {/* new message button */}
-        <div className="absolute right-0 bottom-0 bg-blue-600 m-8 rounded-full sm:m-0 sm:relative sm:bg-transparent sm:rounded-none md:flex md:justify-center md:items-center p-10">
+        <div className="sm:content sm:m-2 sm:bg-transparent sm:rounded-none md:flex md:justify-center md:items-center">
           <Link
             to="/"
             className="sm:p-2 sm:bg-blue-700 sm:w-full text-center text-white font-semibold rounded-lg"
           >
-            <span className="hidden md:contents">New Message</span>
-            <span className="h-8 w-8 rounded-full bg-red-500"></span>
+            <span className="hidden sm:contents sm:text-xs md:text-base">Create</span>
+            <span className="absolute right-8 bottom-20 p-2 w-16 h-16 flex justify-center items-center rounded-full bg-blue-700 text-xl sm:hidden">+</span>
           </Link>
         </div>
 
         {/* menu */}
         <div className="flex m-auto justify-around space-x-2 sm:m-2 sm:flex sm:flex-col">
-          <ul className="sm:space-y-6 flex sm:inline-block">
+          <ul className="flex space-x-2 text-2xl sm:text-base sm:space-y-6 sm:flex sm:flex-col">
             <li>
               <NavLink
                 to="/inbox"
@@ -30,7 +30,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-inbox"></i>
@@ -38,7 +38,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-inbox"></i>
                     </span>
-                    <span className="hidden sm:inline">Inbox</span>
+                    <span className="hidden md:inline">Inbox</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -54,7 +54,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-clock"></i>
@@ -62,7 +62,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-clock"></i>
                     </span>
-                    <span className="hidden sm:inline">Drafts</span>
+                    <span className="hidden md:inline">Drafts</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -78,7 +78,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-check-circle"></i>
@@ -86,7 +86,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-check-circle"></i>
                     </span>
-                    <span className="hidden sm:inline">Sent</span>
+                    <span className="hidden md:inline">Sent</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -102,7 +102,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-sign-out-alt"></i>
@@ -110,7 +110,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-sign-out-alt"></i>
                     </span>
-                    <span className="hidden sm:inline">Outbox</span>
+                    <span className="hidden md:inline">Outbox</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -126,7 +126,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-archive"></i>
@@ -134,7 +134,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-archive"></i>
                     </span>
-                    <span className="hidden sm:inline">Archive</span>
+                    <span className="hidden md:inline">Archive</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>
@@ -150,7 +150,7 @@ const MailActionsMenu = () => {
                 }}
                 className="font-semibold text-gray-400"
               >
-                <div className="flex justify-around">
+                <div className="flex justify-around sm:justify-around sm:items-center">
                   <div className="space-x-5 w-1/2">
                     <span className="sm:hidden">
                       <i className="fa fa-trash"></i>
@@ -158,7 +158,7 @@ const MailActionsMenu = () => {
                     <span className="hidden sm:contents">
                       <i className="fa fa-trash"></i>
                     </span>
-                    <span className="hidden sm:inline">Trash</span>
+                    <span className="hidden md:inline">Trash</span>
                   </div>
                   <span className="p-1 rounded-full h-5 w-5 flex justify-center items-center text-xs text-white"></span>
                 </div>

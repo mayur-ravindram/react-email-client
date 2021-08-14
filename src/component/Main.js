@@ -61,7 +61,7 @@ export const Main = () => {
                 path="/inbox"
                 render={(props) => (
                   <MailList
-                    data={list}
+                    data={list.inbox}
                     className="flex bg-white w-2/3 rounded-l-3xl -ml-5"
                   />
                 )}
@@ -110,19 +110,19 @@ export const Main = () => {
                 <MailPreviewComponent data={list} />
               </Route>
               <Route path="/drafts/:id">
-                <MailPreviewComponent data={list.drafts} />
+                <MailPreviewComponent data={list} />
               </Route>
               <Route path="/sent/:id">
-                <MailPreviewComponent data={list.sent} />
+                <MailPreviewComponent data={list} />
               </Route>
               <Route path="/outbox/:id">
-                <MailPreviewComponent data={list.outbox} />
+                <MailPreviewComponent data={list} />
               </Route>
               <Route path="/archive/:id">
-                <MailPreviewComponent data={list.archive} />
+                <MailPreviewComponent data={list} />
               </Route>
               <Route path="/trash/:id">
-                <MailPreviewComponent data={list.trash} />
+                <MailPreviewComponent data={list} />
               </Route>
             </Switch>
           </div>

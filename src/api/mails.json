@@ -8,7 +8,8 @@
             "emailSubject": "Attendance!",
             "emailBody": "Hi Mayur,\n\nPlease maintain regularity in attendance.\n\nThanks,\nJohn.",
             "emailAvatarUrl": "avatars/john-doe.svg",
-            "timestamp": "08-07-2021T18:29:00"
+            "timestamp": "2021-08-01T13:30:00",
+            "read": false
         },
         {
             "id": "610e27ac374f8b0802cc2524",
@@ -17,7 +18,8 @@
             "emailSubject": "Tesla new model update",
             "emailBody": "Hi Mayur!\n\nCheck out the brand new model of Tesla!\n\nRegards,\nElon",
             "emailAvatarUrl": "avatars/elon-musk.svg",
-            "timestamp": "08-07-2021T8:00:00"
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
         },
         {
             "id": "610e29ad69fc54426a68e85e",
@@ -26,7 +28,88 @@
             "emailSubject": "No more windows updates for you",
             "emailBody": "Hey M,\n\nYou won't receive windows updatesd anymore.\n\nThanks,\nBill🎈.",
             "emailAvatarUrl": "avatars/bill-gates.svg",
-            "timestamp": "08-05-2021T20:29:00"
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        }
+    ],
+    "outbox": [
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "John Doe",
+            "emailSubject": "Attendance!",
+            "emailBody": "Hi Mayur,\n\nPlease maintain regularity in attendance.\n\nThanks,\nJohn.",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        },
+        {
+            "id": "610e27ac374f8b0802cc2524",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "Elon Musk",
+            "emailSubject": "Tesla new model update",
+            "emailBody": "Hi Mayur!\n\nCheck out the brand new model of Tesla!\n\nRegards,\nElon",
+            "emailAvatarUrl": "avatars/elon-musk.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        },
+        {
+            "id": "610e29ad69fc54426a68e85e",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "Bill Gates",
+            "emailSubject": "No more windows updates for you",
+            "emailBody": "Hey M,\n\nYou won't receive windows updatesd anymore.\n\nThanks,\nBill🎈.",
+            "emailAvatarUrl": "avatars/bill-gates.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        }
+    ],
+    "sent": [
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "John Doe",
+            "emailSubject": "Attendance!",
+            "emailBody": "Hi Mayur,\n\nPlease maintain regularity in attendance.\n\nThanks,\nJohn.",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        }
+    ],
+    "trash": [
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "John Doe",
+            "emailSubject": "Trash Subject!",
+            "emailBody": "This is trash mail",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        }
+    ],
+    "archive": [
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "John Doe",
+            "emailSubject": "Archive Subject!",
+            "emailBody": "This is Archive mail",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        }
+    ],
+    "drafts": [
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "Mayur Mane",
+            "emailTo": "John Doe",
+            "emailSubject": "Draft Subject!",
+            "emailBody": "This is Draft mail",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
         }
     ]
 }

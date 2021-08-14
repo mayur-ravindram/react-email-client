@@ -5,7 +5,7 @@ const MailActionsMenu = () => {
   return (
     <>
       {/* navigation side pane */}
-      <div className="p-2 w-full my-5 h-20 absolute left-0 bottom-0 flex sm:flex sm:flex-col sm:h-auto sm:relative sm:m-0 sm:w-1/3 bg-gray-200 sm:rounded-l-xl">
+      <div className="p-2 w-full h-20 absolute left-0 bottom-0 flex sm:flex sm:flex-col sm:h-auto sm:relative sm:m-0 sm:w-1/3 bg-gray-200 sm:rounded-l-xl">
         {/* new message button */}
         <div className="sm:content sm:m-2 sm:bg-transparent sm:rounded-none md:flex md:justify-center md:items-center">
           <Link

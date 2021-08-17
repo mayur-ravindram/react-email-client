@@ -52,6 +52,7 @@ export const MailPreviewComponent = ({ data }) => {
             <img
               src={`../${message.emailAvatarUrl}`}
               alt="me"
+              width="1rem" height="1rem"
               className="rounded-full h-16 w-16 shadow-md"
             />
           </div>
@@ -60,29 +61,6 @@ export const MailPreviewComponent = ({ data }) => {
         {/* mail content */}
         <div className="m-10 text-gray-800 font-medium text-sm leading-8">
           <pre className="font-semibold">{message.emailBody}</pre>
-
-          {/* attachments */}
-
-          {/* <div className="space-y-1">
-            <div className="mt-10 space-x-3 flex items-center">
-              <div className="h-10 w-10 text-center text-gray-500 bg-blue-300 rounded-md">
-                <i className="fa fa-paperclip"></i>
-              </div>
-              <div className="flex flex-col">
-                <span>Poject-brief.pdf</span>
-                <span className="text-xs font-medium opacity-50">1.02 MB</span>
-              </div>
-            </div>
-            <div className="mt-10 space-x-3 flex items-center">
-              <div className="h-10 w-10 text-center text-gray-500 bg-yellow-300 rounded-md">
-                <i className="fa fa-paperclip"></i>
-              </div>
-              <div className="flex flex-col">
-                <span>Poject-wireframe.psd</span>
-                <span className="text-xs font-medium opacity-50">4.96 MB</span>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

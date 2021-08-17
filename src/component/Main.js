@@ -30,13 +30,13 @@ export const Main = () => {
 
           {/* sidepane -2  */}
           <div className="bg-white sm:w-1/2 sm:flex sm:flex-col">
-            <div className="flex flex-col rounded-xl p-2">
+            <div className="hidden sm:flex flex-col rounded-xl p-2">
               {/* this is input box + search flex */}
               <div className="flex p-2 m-2 bg-white rounded-sm shadow-md">
                 <input
                   type="search"
                   className="w-full h-auto outline-none"
-                  placeholder="Search"
+                  placeholder="I am Search box from Main"
                 />
                 <span>
                   <svg
@@ -104,7 +104,7 @@ export const Main = () => {
           </div>
 
           {/* sidepane -3 */}
-          <div className="bg-gray-100 w-full flex flex-col rounded-r-xl">
+          <div className="md:bg-gray-100 md:w-full md:flex md:flex-col md:rounded-r-xl">
             <Switch>
               <Route path="/inbox/:id">
                 <MailPreviewComponent data={list} />

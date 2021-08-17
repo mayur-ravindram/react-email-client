@@ -30,6 +30,36 @@
             "emailAvatarUrl": "avatars/bill-gates.svg",
             "timestamp": "2021-08-13T00:00:00-06:00",
             "read": true
+        },
+        {
+            "id": "610e25c1374f8b0802cc2521",
+            "emailFrom": "John Doe",
+            "emailTo": "Mayur Mane",
+            "emailSubject": "Attendance!",
+            "emailBody": "Hi Mayur,\n\nPlease maintain regularity in attendance.\n\nThanks,\nJohn.",
+            "emailAvatarUrl": "avatars/john-doe.svg",
+            "timestamp": "2021-08-01T13:30:00",
+            "read": false
+        },
+        {
+            "id": "610e27ac374f8b0802cc2524",
+            "emailFrom": "Elon Musk",
+            "emailTo": "Mayur Mane",
+            "emailSubject": "Tesla new model update",
+            "emailBody": "Hi Mayur!\n\nCheck out the brand new model of Tesla!\n\nRegards,\nElon",
+            "emailAvatarUrl": "avatars/elon-musk.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
+        },
+        {
+            "id": "610e29ad69fc54426a68e85e",
+            "emailFrom": "Bill Gates",
+            "emailTo": "Mayur Mane",
+            "emailSubject": "No more windows updates for you",
+            "emailBody": "Hey M,\n\nYou won't receive windows updatesd anymore.\n\nThanks,\nBill🎈.",
+            "emailAvatarUrl": "avatars/bill-gates.svg",
+            "timestamp": "2021-08-13T00:00:00-06:00",
+            "read": true
         }
     ],
     "outbox": [

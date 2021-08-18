@@ -11,7 +11,6 @@ const MailActionsMenu = () => {
     <>
       {/* navigation side pane */}
       <div className="flex flex-col rounded-xl p-2"></div>
-      {/* p-2 w-full h-20 absolute left-0 bottom-0 flex */}
       <div
         className={`bg-white sm:flex sm:flex-col sm:h-auto sm:relative sm:m-0 sm:w-1/3 sm:bg-gray-200 sm:rounded-l-xl shadow-lg`}
       >
@@ -33,8 +32,8 @@ const MailActionsMenu = () => {
             </span>
           </Link>
         </div>
-        {/* menu */}
-        {/* flex m-auto justify-around  */}
+
+        {/* menu regular screen*/}
         <div className="hidden space-x-2 sm:m-2 sm:flex sm:flex-col">
           <ul className="flex space-x-2 text-2xl sm:text-base sm:space-y-6 sm:flex sm:flex-col">
             <li>
@@ -177,13 +176,15 @@ const MailActionsMenu = () => {
             </li>
           </ul>
         </div>
-        <button name="toggleButtonOne"
+
+        <button
+          name="toggleButtonOne"
           onClick={() => toggleSidebar(sidebarOpen)}
           className={`flex justify-center items-center rounded-full hover:text-blue-700 w-16 h-16 mx-2 sm:hidden`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-6 w-6 ${sidebarOpen ? "hidden" : "block"}`}
+            className={`h-6 w-6 ${sidebarOpen ? "" : "block"}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -195,25 +196,16 @@ const MailActionsMenu = () => {
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={`h-6 w-6 ${sidebarOpen ? "block" : "hidden"}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
         </button>
 
-        <div className={`h-screen w-2/3 bg-gray-200 ${sidebarOpen ? "fixed" : "hidden"} sm:hidden`}>
-          <div className="flex justify-between items-start m-8">
-            <div className="space-x-2 m-2 flex flex-col">
+        {/* menu responsive */}
+        <div
+          className={`h-screen w-2/3 absolute inset-y-0 left-0 transform transition duration-700 ease-in-out bg-gray-50 shadow-xl ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full "
+          } sm:hidden `}
+        >
+          <div className="flex justify-between items-start mt-16 mx-4">
+            <div className="space-x-2 m-2 flex">
               <ul className="flex flex-col text-base space-y-6">
                 <li>
                   <NavLink
@@ -286,8 +278,8 @@ const MailActionsMenu = () => {
                     }}
                     className="font-semibold text-gray-400"
                   >
-                    <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                    <div className="flex justify-between items-center">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-sign-out-alt"></i>
                         </span>
@@ -307,7 +299,7 @@ const MailActionsMenu = () => {
                     className="font-semibold text-gray-400"
                   >
                     <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-archive"></i>
                         </span>
@@ -327,7 +319,7 @@ const MailActionsMenu = () => {
                     className="font-semibold text-gray-400"
                   >
                     <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-trash"></i>
                         </span>
@@ -338,9 +330,31 @@ const MailActionsMenu = () => {
                   </NavLink>
                 </li>
               </ul>
+
+              <button
+                name="toggleButtonOne"
+                onClick={() => toggleSidebar(sidebarOpen)}
+                className={`flex justify-end items-start rounded-full hover:text-blue-700 w-16 h-16 mx-2 sm:hidden`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-6 w-6 ${sidebarOpen ? "block" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
+
         {/* end of navigation sidepane  */}
       </div>
     </>

@@ -36,7 +36,7 @@ export const Main = () => {
                 <input
                   type="search"
                   className="w-full h-auto outline-none"
-                  placeholder="I am Search box from Main"
+                  placeholder="Search mails"
                 />
                 <span>
                   <svg

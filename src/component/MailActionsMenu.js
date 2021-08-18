@@ -279,8 +279,8 @@ const MailActionsMenu = () => {
                     }}
                     className="font-semibold text-gray-400"
                   >
-                    <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                    <div className="flex justify-between items-center">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-sign-out-alt"></i>
                         </span>
@@ -300,7 +300,7 @@ const MailActionsMenu = () => {
                     className="font-semibold text-gray-400"
                   >
                     <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-archive"></i>
                         </span>
@@ -320,7 +320,7 @@ const MailActionsMenu = () => {
                     className="font-semibold text-gray-400"
                   >
                     <div className="flex justify-around items-center">
-                      <div className="space-x-8">
+                      <div className="space-x-6">
                         <span>
                           <i className="fa fa-trash"></i>
                         </span>

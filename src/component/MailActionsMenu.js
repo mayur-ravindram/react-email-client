@@ -11,7 +11,6 @@ const MailActionsMenu = () => {
     <>
       {/* navigation side pane */}
       <div className="flex flex-col rounded-xl p-2"></div>
-      {/* p-2 w-full h-20 absolute left-0 bottom-0 flex */}
       <div
         className={`bg-white sm:flex sm:flex-col sm:h-auto sm:relative sm:m-0 sm:w-1/3 sm:bg-gray-200 sm:rounded-l-xl shadow-lg`}
       >
